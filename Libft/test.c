@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   test.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mravera <@student.42lausanne.ch>           +#+  +:+       +#+        */
+/*   By: mathis <mathis@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/29 18:00:06 by mravera           #+#    #+#             */
-/*   Updated: 2021/10/29 18:02:06 by mravera          ###   ########.fr       */
+/*   Updated: 2021/11/09 15:50:33 by mathis           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,6 @@
 
 int	main(void)
 {
-	printf("oui ==> %lu\n", strlen("ouiooui\0ducul"));
+	printf("oui ==> %lu\n", strlen("ouiooui\0du"));
 	return (0);
 }
