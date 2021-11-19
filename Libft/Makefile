@@ -6,23 +6,24 @@
 #    By: mathis <marvin@42.fr>                      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/11/18 19:28:02 by mathis            #+#    #+#              #
-#    Updated: 2021/11/19 16:32:14 by mathis           ###   ########.fr        #
+#    Updated: 2021/11/19 16:56:00 by mathis           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 #variables
-CC = gcc               #nom du compilateur
-EXEC = libft.a         #nom de l'executable
-SRC = $(wildcard *.c)  #liste de tout les fichiers .c
-OBJ = $(SRC:.c=.o)     #liste de tout les fichiers .o a partir des .c
+CC = gcc                          #nom du compilateur
+NAME = libft.a                    #nom
+SRC = $(wildcard *.c)             #liste de tout les fichiers .c
+OBJ = $(SRC:.c=.o)                #liste de tout les fichiers .o a partir des .c
+CFLAGS = -Wall -Wextra -Werror    #liste de flags a utiliser par defaut
 
 #premiere commande qui va debuter toutes les autres
-all : $(EXEC)
+all : $(NAME)
 
 #commande generique pour transformer tous les .c en .o
 #%.o : %.c
 #	$(CC) -o $@ -c $<
 
 #commande de creation de la bibliotheque finale
-$(EXEC) : $(OBJ)
-	ar rcs $(EXEC) $^
+$(NAME) : $(OBJ)
+	ar rcs $@ $^
