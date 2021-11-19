@@ -6,7 +6,7 @@
 #    By: mathis <marvin@42.fr>                      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/11/18 19:28:02 by mathis            #+#    #+#              #
-#    Updated: 2021/11/19 16:56:00 by mathis           ###   ########.fr        #
+#    Updated: 2021/11/19 17:09:47 by mathis           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -27,3 +27,7 @@ all : $(NAME)
 #commande de creation de la bibliotheque finale
 $(NAME) : $(OBJ)
 	ar rcs $@ $^
+
+clean :
+	rm $(OBJ)
+
