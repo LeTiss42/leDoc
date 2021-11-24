@@ -6,9 +6,11 @@
 /*   By: mravera <@student.42lausanne.ch>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/28 11:17:08 by mravera           #+#    #+#             */
-/*   Updated: 2021/10/28 11:40:33 by mravera          ###   ########.fr       */
+/*   Updated: 2021/11/24 17:59:49 by mravera          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 int	ft_toupper(int c)
 {

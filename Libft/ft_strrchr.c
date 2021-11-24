@@ -6,9 +6,11 @@
 /*   By: mravera <@student.42lausanne.ch>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/28 17:00:44 by mravera           #+#    #+#             */
-/*   Updated: 2021/10/28 18:15:38 by mravera          ###   ########.fr       */
+/*   Updated: 2021/11/24 17:59:35 by mravera          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 char	*ft_strrchr(const char *s, int c)
 {

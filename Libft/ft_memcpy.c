@@ -6,13 +6,13 @@
 /*   By: mravera <@student.42lausanne.ch>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/23 19:17:03 by mravera           #+#    #+#             */
-/*   Updated: 2021/11/23 20:22:33 by mravera          ###   ########.fr       */
+/*   Updated: 2021/11/24 18:47:04 by mravera          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
+#include "libft.h"
 
-void	*ft_memcpy(void *restrict dst, const void *restrict src, size_t n)
+void	*ft_memcpy(void *dst, const void *src, size_t n)
 {
 	size_t	i;
 

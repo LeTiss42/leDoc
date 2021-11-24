@@ -6,11 +6,11 @@
 /*   By: mravera <@student.42lausanne.ch>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/24 14:33:57 by mravera           #+#    #+#             */
-/*   Updated: 2021/11/24 15:59:20 by mravera          ###   ########.fr       */
+/*   Updated: 2021/11/24 19:34:42 by mravera          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
+#include "libft.h"
 
 void	*ft_memmove(void *dst, const void *src, size_t len)
 {
@@ -19,9 +19,9 @@ void	*ft_memmove(void *dst, const void *src, size_t len)
 	i = 0;
 	if ((dst > src) && (dst <= src + len))
 	{
-		while (i <= len)
+		while (i < len)
 		{
-			*((unsigned char *)(dst + (len - i))) = *((unsigned char *)(src + (len - i)));
+			*((unsigned char *)(dst + (len - 1 - i))) = *((unsigned char *)(src + (len - 1 - i)));
 			i++;
 		}
 		return (dst);
@@ -30,28 +30,23 @@ void	*ft_memmove(void *dst, const void *src, size_t len)
 	{
 		while (i < len)
 		{
-			*((unsigned char *)(dst + i)) = *((unsigned char *)(src + i));
+			((unsigned char *)dst)[i] = ((unsigned char *)src)[i];
 			i++;
 		}
 		return (dst);
 	}
-
 }
-
+/*
 #include <stdio.h>
 #include <string.h>
 #include <stdlib.h>
 
-int	main(int argc, char **argv)
+int	main(void)
 {
-	(void) argc;
-	char dest1[] = "12345678901234567890";
-	char dest2[] = "12345678901234567890";
-	char src[] = "ouistiti";
-
-	printf("originale  ==> %s\n", src);
-	printf("memmove    ==> %s\n", memmove(dest1, src, atoi(argv[1])));
-	printf("ft_memmove ==> %s\n", ft_memmove(dest2, src, atoi(argv[1])));
+	char sResult[] = {67, 68, 67, 68, 69, 0, 45};
+	char sResult2[] = {67, 68, 67, 68, 69, 0, 45};
+	printf("memmove    ==> %s\n", memmove(sResult + 1, sResult, 2));
+	printf("ft_memmove ==> %s\n", ft_memmove(sResult2 + 1, sResult2, 2));
 	return (0);
 }
-
+*/
