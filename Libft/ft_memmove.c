@@ -6,7 +6,7 @@
 /*   By: mravera <@student.42lausanne.ch>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/24 14:33:57 by mravera           #+#    #+#             */
-/*   Updated: 2021/11/24 19:34:42 by mravera          ###   ########.fr       */
+/*   Updated: 2021/11/25 12:09:39 by mravera          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,8 @@ void	*ft_memmove(void *dst, const void *src, size_t len)
 	{
 		while (i < len)
 		{
-			*((unsigned char *)(dst + (len - 1 - i))) = *((unsigned char *)(src + (len - 1 - i)));
+			*((unsigned char *)(dst + (len - 1 - i)))
+				= *((unsigned char *)(src + (len - 1 - i)));
 			i++;
 		}
 		return (dst);
