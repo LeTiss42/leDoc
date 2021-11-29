@@ -6,58 +6,61 @@
 /*   By: mravera <@student.42lausanne.ch>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/25 15:08:09 by mravera           #+#    #+#             */
-/*   Updated: 2021/11/25 19:08:29 by mravera          ###   ########.fr       */
+/*   Updated: 2021/11/30 00:10:38 by mathis           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_strlcatbis(char *dst, const char *src, size_t dstsize)
+size_t	ft_strlcatpute(char *dst, const char *src, size_t dstsize)
 {
-	size_t	i;
-	int		j;
-	int		x;
-	int		y;
+	int        len_dst;
+        int        len_src;
+        int        maxcat;
+	int        i;
 
-	y = 0;
+        len_dst = ft_strlen(dst);
+        len_src = ft_strlen(src);
 	i = 0;
-	j = 0;
-	while (src[y])
-		y++;
-	while (dst[i])
-		i++;
-	x = dstsize - i - 1;
-	while (j < x && src[j] && x > 0)
+	maxcat = dstsize - len_dst - 1;
+	while (i < maxcat && src[i])
 	{
-		dst[i + j] = src[j];
-		j++;
+		dst[len_dst + i] = src[i];
+		i++;
 	}
-	/*if (dstsize == 0 || i > dstsize)
-		dst[i + j] = 0;*/
-	if (dstsize < i)
-		return (dstsize + y);
+	if (dstsize > len_dst)
+		dst[len_dst + i] = 0;
+	if (dstsize < len_dst)
+		return (len_src + dstsize);
 	else
-		return (i + y);
+		return (len_src + len_dst);
 }
 
-size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
+size_t  ft_strlcat(char *dst, const char *src, size_t dstsize)
 {
-	size_t	i;
-	size_t	x;
+        int        len_dst;
+        int        len_src;
+        size_t        maxcat;
+        int        i;
 
-	i = 0;
-	x = dstsize - ft_strlen(dst) - 1;
-	while (i < x && src[i])
-	{
-		dst[ft_strlen(dst) + i] = src[i];
-		i++;
-	}
-	if ((dstsize =! 0) && (ft_strlen(dst) <= dstsize))
-		dst[ft_strlen(dst) + i] = 0;
-	if (dstsize < i)
-		return (dstsize + ft_strlen(src));
-	else
-		return (ft_strlen(dst) + ft_strlen(src));
+        len_dst = ft_strlen(dst);
+        len_src = ft_strlen(src);
+        i = 0;
+        maxcat = dstsize - len_dst - 1;
+        if (dstsize > len_dst)
+        {
+                while (i < maxcat && src[i])
+                {
+                        dst[len_dst + i] = src[i];
+                        i++;
+                }
+        }
+        //if (dstsize > len_dst)
+        //        dst[len_dst + i] = 0;
+        if (dstsize < len_dst)
+                return (len_src + dstsize);
+        else
+                return (len_src + len_dst);
 }
 
 #include <stdlib.h>
