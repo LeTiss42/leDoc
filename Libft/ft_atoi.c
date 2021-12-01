@@ -21,7 +21,7 @@ int     ft_atoi(const char *nptr)
                 res = (res * 10) + (nptr[i++] - 48);
         return (sign * res);
 }
-
+/*
 #include <stdlib.h>
 #include <string.h>
 #include <stdio.h>
@@ -33,3 +33,4 @@ int main(int argc, char **argv)
         printf("res = %d\n", ft_atoi(argv[1]));
         return (0);
 }
+*/
