@@ -6,7 +6,7 @@
 /*   By: mravera <@student.42lausanne.ch>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/24 16:20:55 by mravera           #+#    #+#             */
-/*   Updated: 2021/11/25 17:17:33 by mravera          ###   ########.fr       */
+/*   Updated: 2021/12/01 18:25:02 by mathis           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,5 +35,7 @@ int		ft_tolower(int c);
 int		ft_toupper(int c);
 size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize);
 size_t	ft_strlcat(char *dst, const char *src, size_t dstsize);
+int     ft_atoi(const char *nptr);
+void    *ft_calloc(size_t nmemb, size_t size);
 
 #endif
