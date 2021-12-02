@@ -11,7 +11,7 @@ int     ft_atoi(const char *nptr)
         res = 0;
         while ((9 <= nptr[i] && nptr[i] <= 13) || (nptr[i] == ' '))
                 i++;
-        while (nptr[i] == '-' || nptr[i] == '+')
+        if (nptr[i] == '-' || nptr[i] == '+')
         {
                 if (nptr[i] == '-')
                         sign = sign * -1;
@@ -21,7 +21,7 @@ int     ft_atoi(const char *nptr)
                 res = (res * 10) + (nptr[i++] - 48);
         return (sign * res);
 }
-
+/*
 #include <stdlib.h>
 #include <string.h>
 #include <stdio.h>
@@ -31,10 +31,8 @@ int main(int argc, char **argv)
         (void)  argc;
 
         printf("res = %d\n", ft_atoi(argv[1]));
-        printf("res = %d\n", ft_atoi((e + "--1").c_str()));
-        printf("res = %d\n", ft_atoi((e + "a1").c_str()));
-        printf("res = %d\n", ft_atoi(argv[1]));
-        printf("res = %d\n", ft_atoi(argv[1]));
+        printf("res = %d\n", ft_atoi("-1"));
+        printf("res = %d\n", ft_atoi( "-1h42"));
         return (0);
 }
-
+*/

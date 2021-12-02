@@ -6,7 +6,7 @@
 /*   By: mravera <@student.42lausanne.ch>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/28 11:58:26 by mravera           #+#    #+#             */
-/*   Updated: 2021/11/24 17:59:10 by mravera          ###   ########.fr       */
+/*   Updated: 2021/12/02 02:46:54 by mathis           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ char	*ft_strchr(const char *s, int c)
 	i = 0;
 	while (s[i] != 0)
 	{
-		if (s[i] == c)
+		if (s[i] == c % 256)
 			return ((char *)s + i);
 		else
 			i++;
