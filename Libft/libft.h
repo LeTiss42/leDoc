@@ -6,7 +6,7 @@
 /*   By: mravera <@student.42lausanne.ch>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/24 16:20:55 by mravera           #+#    #+#             */
-/*   Updated: 2021/12/02 17:47:34 by mathis           ###   ########.fr       */
+/*   Updated: 2021/12/03 01:41:53 by mathis           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,5 +39,6 @@ int     ft_atoi(const char *nptr);
 void    *ft_calloc(size_t nmemb, size_t size);
 char    *ft_strdup(const char *s);
 char    *ft_substr(char const *s, unsigned int start, size_t len);
+char    *ft_strjoin(char const *s1, char const *s2);
 
 #endif
