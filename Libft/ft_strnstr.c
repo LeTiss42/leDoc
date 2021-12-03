@@ -6,7 +6,7 @@
 /*   By: mravera <@student.42lausanne.ch>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/23 13:24:18 by mravera           #+#    #+#             */
-/*   Updated: 2021/12/02 03:01:26 by mathis           ###   ########.fr       */
+/*   Updated: 2021/12/03 21:47:03 by mathis           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 
 char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 {
-	size_t  i;
-	size_t  j;
+	size_t	i;
+	size_t	j;
 
 	j = 0;
 	i = 0;
