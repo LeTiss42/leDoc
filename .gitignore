@@ -53,3 +53,4 @@ dkms.conf
 
 # fichiers perso
 .libftTester
+.FT_SPLIT_TESTER
