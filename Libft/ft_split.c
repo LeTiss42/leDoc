@@ -6,12 +6,23 @@
 /*   By: mravera <@student.42lausanne.ch>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/06 14:56:25 by mravera           #+#    #+#             */
-/*   Updated: 2021/12/06 21:55:51 by mravera          ###   ########.fr       */
+/*   Updated: 2021/12/07 19:39:36 by mravera          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 #include <stdlib.h>
+
+char	**freetab(char **tab)
+{
+	size_t	i;
+
+	i = 0;
+	while (tab[i])
+		free(tab[i++]);
+	free(tab);
+	return (NULL);
+}
 
 static size_t	nextchar(char const *s, char c)
 {
@@ -46,13 +57,11 @@ char	**ft_split(char const *s, char c)
 {
 	size_t	i;
 	char	**res;
-	size_t	nbw;
 
 	if (!s)
 		return (0);
 	i = 0;
-	nbw = nbword(s, c);
-	res = malloc(sizeof (char *) * (nbw + 1));
+	res = malloc(sizeof (char *) * (nbword(s, c) + 1));
 	if (!res)
 		return (0);
 	while (*s)
@@ -62,6 +71,8 @@ char	**ft_split(char const *s, char c)
 		else
 		{
 			res[i] = ft_substr(s, 0, nextchar(s, c));
+			if (!res[i])
+				return (freetab(res));
 			s += nextchar(s, c);
 			i++;
 		}
