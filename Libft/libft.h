@@ -6,7 +6,7 @@
 /*   By: mravera <@student.42lausanne.ch>	    +#+  +:+	   +#+	      */
 /*						  +#+#+#+#+#+	+#+	      */
 /*   Created: 2021/11/24 16:20:55 by mravera	       #+#    #+#	      */
-/*   Updated: 2021/12/09 16:11:43 by mravera          ###   ########.fr       */
+/*   Updated: 2021/12/09 18:42:09 by mravera          ###   ########.fr       */
 /*									      */
 /* ************************************************************************** */
 
@@ -43,5 +43,7 @@ char	*ft_strjoin(char const *s1, char const *s2);
 char	*ft_strtrim(char const *s1, char const *set);
 char	**ft_split(char const *s, char c);
 char	*ft_itoa(int n);
+char	*ft_strmapi(char const *s, char (*f)(unsigned int, char));
+void	ft_striteri(char *s, void (*f)(unsigned int, char*));
 
 #endif
