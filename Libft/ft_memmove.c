@@ -6,7 +6,7 @@
 /*   By: mravera <@student.42lausanne.ch>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/24 14:33:57 by mravera           #+#    #+#             */
-/*   Updated: 2021/11/25 12:09:39 by mravera          ###   ########.fr       */
+/*   Updated: 2021/12/09 14:13:03 by mravera          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,8 @@ void	*ft_memmove(void *dst, const void *src, size_t len)
 {
 	size_t	i;
 
+	if (dst == NULL && src == NULL)
+		return (NULL);
 	i = 0;
 	if ((dst > src) && (dst <= src + len))
 	{
@@ -44,10 +46,10 @@ void	*ft_memmove(void *dst, const void *src, size_t len)
 
 int	main(void)
 {
-	char sResult[] = {67, 68, 67, 68, 69, 0, 45};
-	char sResult2[] = {67, 68, 67, 68, 69, 0, 45};
-	printf("memmove    ==> %s\n", memmove(sResult + 1, sResult, 2));
-	printf("ft_memmove ==> %s\n", ft_memmove(sResult2 + 1, sResult2, 2));
+	//char sResult[] = {67, 68, 67, 68, 69, 0, 45};
+	//char sResult2[] = {67, 68, 67, 68, 69, 0, 45};
+	printf("memmove    ==> %s\n", memmove(NULL, NULL, 0));
+	printf("ft_memmove ==> %s\n", ft_memmove(NULL, NULL, 0));
 	return (0);
 }
 */

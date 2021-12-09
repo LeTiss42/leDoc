@@ -6,7 +6,7 @@
 /*   By: mravera <@student.42lausanne.ch>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/25 15:08:09 by mravera           #+#    #+#             */
-/*   Updated: 2021/12/03 21:50:16 by mathis           ###   ########.fr       */
+/*   Updated: 2021/12/09 12:06:49 by mravera          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,6 +31,7 @@ size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 			i++;
 		}
 	}
+	dst[len_dst + i] = 0;
 	if (dstsize < len_dst)
 		return (len_src + dstsize);
 	else
@@ -89,7 +90,7 @@ int	main(int argc, char **argv)
 	
 	memset(dest, 0, 30); memset(dest, '1', 10);
 	// 9p
-	rintf("n9  (%lu) = [%zu]\n", strlen(src) + 5, ft_strlcat(dest, src, 5));
+	printf("n9  (%lu) = [%zu]\n", strlen(src) + 5, ft_strlcat(dest, src, 5));
 	printf("dest9 (1111111111)= [%s]\n", dest);
 	
 	memset(dest, 0, 30); memset(dest, '1', 10);
