@@ -6,7 +6,7 @@
 /*   By: mravera <@student.42lausanne.ch>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/25 15:08:09 by mravera           #+#    #+#             */
-/*   Updated: 2021/12/09 12:06:49 by mravera          ###   ########.fr       */
+/*   Updated: 2021/12/10 16:53:31 by mravera          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,13 +30,29 @@ size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 			dst[len_dst + i] = src[i];
 			i++;
 		}
+		dst[len_dst + i] = 0;
 	}
-	dst[len_dst + i] = 0;
 	if (dstsize < len_dst)
 		return (len_src + dstsize);
 	else
 		return (len_src + len_dst);
 }
+/*
+int    main(int argc, char **argv)
+{
+    (void)    argc;
+    (void)    argv;
+    char dest[15]; ft_memset(dest, 'r', 15);
+    char * src = (char *)"lorem ipsum dolor sit amet";
+
+    // 1
+    printf("n1    = [%zu]\n", ft_strlcat(dest, src , 5));
+    printf("dest1 = [%s]\n", dest);
+    write(1, dest, 15);
+
+    return (0);
+}
+*/
 /*
 #include <stdlib.h>
 #include <string.h>
