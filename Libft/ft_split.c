@@ -6,14 +6,14 @@
 /*   By: mravera <@student.42lausanne.ch>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/06 14:56:25 by mravera           #+#    #+#             */
-/*   Updated: 2021/12/07 19:39:36 by mravera          ###   ########.fr       */
+/*   Updated: 2021/12/10 15:17:07 by mravera          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 #include <stdlib.h>
 
-char	**freetab(char **tab)
+static char	**freetab(char **tab)
 {
 	size_t	i;
 

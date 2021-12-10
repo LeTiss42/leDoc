@@ -1,13 +1,13 @@
 /* ************************************************************************** */
-/*									      */
-/*							  :::	   ::::::::   */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
 /*   libft.h                                            :+:      :+:    :+:   */
-/*						      +:+ +:+	      +:+     */
-/*   By: mravera <@student.42lausanne.ch>	    +#+  +:+	   +#+	      */
-/*						  +#+#+#+#+#+	+#+	      */
-/*   Created: 2021/11/24 16:20:55 by mravera	       #+#    #+#	      */
-/*   Updated: 2021/12/09 19:46:02 by mravera          ###   ########.fr       */
-/*									      */
+/*                                                    +:+ +:+         +:+     */
+/*   By: mravera <@student.42lausanne.ch>           +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2021/12/10 15:14:28 by mravera           #+#    #+#             */
+/*   Updated: 2021/12/10 15:14:33 by mravera          ###   ########.fr       */
+/*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_H
@@ -49,5 +49,6 @@ void	ft_striteri(char *s, void (*f)(unsigned int, char*));
 void	ft_putchar_fd(char c, int fd);
 void	ft_putstr_fd(char *s, int fd);
 void	ft_putendl_fd(char *s, int fd);
+void	ft_putnbr_fd(int n, int fd);
 
 #endif
