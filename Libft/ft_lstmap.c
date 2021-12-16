@@ -6,20 +6,35 @@
 /*   By: mravera <@student.42lausanne.ch>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/14 14:10:13 by mravera           #+#    #+#             */
-/*   Updated: 2021/12/16 12:31:36 by mravera          ###   ########.fr       */
+/*   Updated: 2021/12/16 16:39:57 by mravera          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-/*
-void	*lstmap_f(void *content)
+t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 {
-	(void)content;
-	return("OK !");
-}
-*/
+	t_list	*head;
+	t_list	*tmp;
 
+	if (!lst)
+		return (NULL);
+	head = ft_lstnew(f(lst->content));
+	if (!head)
+		return (NULL);
+	while (lst->next)
+	{
+		lst = lst->next;
+		tmp = ft_lstnew(f(lst->content));
+		if (!tmp)
+		{
+			ft_lstclear(&head, del);
+			return (NULL);
+		}
+		ft_lstadd_back(&head, tmp);
+	}
+	return (head);
+}
 /*
 t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 {
@@ -43,30 +58,13 @@ t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 }
 */
 
-t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
+/*
+void	*lstmap_f(void *content)
 {
-	t_list	*head;
-	t_list	*tmp;
-
-	if (!lst)
-		return (NULL);
-	head = ft_lstnew(f(lst->content));
-	if (!head)
-		return (NULL);
-	while (lst->next)
-		{
-			lst = lst->next;
-			tmp = ft_lstnew(f(lst->content));
-			if (!tmp)
-			{
-				ft_lstclear(&head, del);
-				return(NULL);
-			}
-			ft_lstadd_back(&head, tmp);
-		}
-	return (head);
+	(void)content;
+	return("OK !");
 }
-
+*/
 
 /*
 int	main(void)
