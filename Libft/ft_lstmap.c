@@ -6,7 +6,7 @@
 /*   By: mravera <@student.42lausanne.ch>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/14 14:10:13 by mravera           #+#    #+#             */
-/*   Updated: 2021/12/15 19:47:57 by mravera          ###   ########.fr       */
+/*   Updated: 2021/12/16 12:31:36 by mravera          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,7 @@ void	*lstmap_f(void *content)
 }
 */
 
+/*
 t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 {
 	t_list *new_lst;
@@ -40,14 +41,14 @@ t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 	}
 	return (new_lst);
 }
+*/
 
-/*
 t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 {
 	t_list	*head;
 	t_list	*tmp;
 
-	if (!lst || !f || !del)
+	if (!lst)
 		return (NULL);
 	head = ft_lstnew(f(lst->content));
 	if (!head)
@@ -65,7 +66,7 @@ t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 		}
 	return (head);
 }
-*/
+
 
 /*
 int	main(void)
