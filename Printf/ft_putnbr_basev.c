@@ -1,32 +1,37 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_calloc.c                                        :+:      :+:    :+:   */
+/*   ft_putnbr_basev.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mathis <mathis@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/01/26 13:04:49 by mathis            #+#    #+#             */
-/*   Updated: 2022/01/26 13:04:54 by mathis           ###   ########.fr       */
+/*   Created: 2022/03/04 12:06:19 by mathis            #+#    #+#             */
+/*   Updated: 2022/03/04 12:07:54 by mathis           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libftprintf.h"
-#include <stdlib.h>
 
-void	*ft_calloc(size_t count, size_t size)
+void	ft_putnbr_basev(char *res, unsigned long long nbr, char *base)
 {
-	size_t	tot;
-	void	*res;
-	size_t	i;
+	unsigned long long	dix;
+	unsigned long long	x;
+	unsigned long long	i;
+	char				temp[34];
 
+	dix = ft_strlen_unsigned(base);
 	i = 0;
-	tot = count * size;
-	res = malloc(tot);
-	if (res == 0)
-		return (0);
-	if (tot > 2147483647)
-		return (0);
-	while (i < tot)
-		((char *)res)[i++] = 0;
-	return (res);
+	if (nbr == 0)
+		res[0] = base[0];
+	if (nbr == 0)
+		return ;
+	if (nbr > 0)
+		x = nbr;
+	while (x > 0)
+	{
+		temp[i++] = base[x % dix];
+		x = x / dix;
+	}
+	while (i-- > 0)
+		res[x++] = temp[i];
 }

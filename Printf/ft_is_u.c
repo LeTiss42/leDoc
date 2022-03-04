@@ -1,28 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstiter.c                                       :+:      :+:    :+:   */
+/*   ft_is_u.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mravera <@student.42lausanne.ch>           +#+  +:+       +#+        */
+/*   By: mathis <mathis@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/12/14 13:26:22 by mravera           #+#    #+#             */
-/*   Updated: 2021/12/14 13:38:25 by mravera          ###   ########.fr       */
+/*   Created: 2022/03/04 11:37:19 by mathis            #+#    #+#             */
+/*   Updated: 2022/03/04 12:09:36 by mathis           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libftprintf.h"
 
-void	ft_lstiter(t_list *lst, void (*f)(void *))
+int	is_u(va_list lst)
 {
-	t_list	*tmp;
+	unsigned int	x;
+	char			*res;
+	size_t			i;
 
-	if (!lst || !f)
-		return ;
-	while (lst)
+	i = 0;
+	res = (char *)malloc(34 * sizeof(char));
+	x = va_arg(lst, const unsigned int);
+	ft_putnbr_base_ui(res, x, "0123456789");
+	while (res[i])
 	{
-		tmp = lst->next;
-		f(lst->content);
-		lst = tmp;
+		write(1, &res[i], 1);
+		i++;
 	}
-	return ;
+	return (i);
 }

@@ -1,22 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstlast.c                                       :+:      :+:    :+:   */
+/*   ft_is_pcent.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mravera <@student.42lausanne.ch>           +#+  +:+       +#+        */
+/*   By: mathis <mathis@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/12/13 20:34:51 by mravera           #+#    #+#             */
-/*   Updated: 2021/12/13 20:45:11 by mravera          ###   ########.fr       */
+/*   Created: 2022/03/04 11:37:10 by mathis            #+#    #+#             */
+/*   Updated: 2022/03/04 12:32:19 by mathis           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libftprintf.h"
 
-t_list	*ft_lstlast(t_list *lst)
+int	is_pcent(void)
 {
-	if (!lst)
-		return (NULL);
-	while (lst->next)
-		lst = lst->next;
-	return (lst);
+	return (write(1, "%", 1));
 }

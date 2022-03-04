@@ -1,26 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstsize.c                                       :+:      :+:    :+:   */
+/*   ft_is_c.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mravera <@student.42lausanne.ch>           +#+  +:+       +#+        */
+/*   By: mathis <mathis@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/12/13 19:58:51 by mravera           #+#    #+#             */
-/*   Updated: 2021/12/13 20:46:29 by mravera          ###   ########.fr       */
+/*   Created: 2022/03/04 11:23:26 by mathis            #+#    #+#             */
+/*   Updated: 2022/03/04 11:37:40 by mathis           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libftprintf.h"
 
-int	ft_lstsize(t_list *lst)
+int	is_c(va_list lst)
 {
-	int		i;
+	int	x;
 
-	i = 0;
-	while (lst)
-	{
-		lst = lst->next;
-		i++;
-	}
-	return (i);
+	x = va_arg(lst, const int);
+	return (write(1, &x, 1));
 }

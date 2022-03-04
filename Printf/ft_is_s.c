@@ -1,25 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstnew.c                                        :+:      :+:    :+:   */
+/*   ft_is_s.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mravera <@student.42lausanne.ch>           +#+  +:+       +#+        */
+/*   By: mathis <mathis@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/12/13 15:53:08 by mravera           #+#    #+#             */
-/*   Updated: 2021/12/13 17:04:36 by mravera          ###   ########.fr       */
+/*   Created: 2022/03/04 11:37:15 by mathis            #+#    #+#             */
+/*   Updated: 2022/03/04 11:39:49 by mathis           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libftprintf.h"
 
-t_list	*ft_lstnew(void *content)
+int	is_s(va_list lst)
 {
-	t_list	*res;
+	char const	*x;
+	size_t		i;
 
-	res = malloc(sizeof(t_list));
-	if (!res)
-		return (NULL);
-	res->content = content;
-	res->next = NULL;
-	return (res);
+	i = 0;
+	x = va_arg(lst, const char *);
+	if (x == NULL)
+		x = "[errNULL]";
+	while (x[i])
+	{
+		write(1, &x[i], 1);
+		i++;
+	}
+	return (i);
 }

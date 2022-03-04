@@ -1,33 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strmapi.c                                       :+:      :+:    :+:   */
+/*   ft_is_d.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mravera <@student.42lausanne.ch>           +#+  +:+       +#+        */
+/*   By: mathis <mathis@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/12/09 17:36:02 by mravera           #+#    #+#             */
-/*   Updated: 2021/12/09 18:12:30 by mravera          ###   ########.fr       */
+/*   Created: 2022/03/04 11:36:44 by mathis            #+#    #+#             */
+/*   Updated: 2022/03/04 12:11:37 by mathis           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libftprintf.h"
-#include <stdio.h>
 
-char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
+int	is_d(va_list lst)
 {
+	int		x;
 	char	*res;
 	size_t	i;
 
 	i = 0;
-	if (s == NULL)
-		return (NULL);
-	res = ft_strdup(s);
-	if (!res)
-		return (NULL);
-	while (s[i])
+	res = (char *)malloc(34 * sizeof(char));
+	x = va_arg(lst, const int);
+	ft_putnbr_base(res, x, "0123456789");
+	while (res[i])
 	{
-		res[i] = f(i, s[i]);
+		write(1, &res[i], 1);
 		i++;
 	}
-	return (res);
+	return (i);
 }

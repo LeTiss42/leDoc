@@ -1,21 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstdelone.c                                     :+:      :+:    :+:   */
+/*   ft_is_x.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mravera <@student.42lausanne.ch>           +#+  +:+       +#+        */
+/*   By: mathis <mathis@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/12/13 21:04:10 by mravera           #+#    #+#             */
-/*   Updated: 2021/12/14 12:29:23 by mravera          ###   ########.fr       */
+/*   Created: 2022/03/04 11:37:24 by mathis            #+#    #+#             */
+/*   Updated: 2022/03/04 12:09:31 by mathis           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libftprintf.h"
 
-void	ft_lstdelone(t_list *lst, void (*del)(void*))
+int	is_x(va_list lst)
 {
-	if (!lst || !del)
-		return ;
-	del(lst->content);
-	free(lst);
+	unsigned int	x;
+	size_t			i;
+	char			*res;
+
+	i = 0;
+	res = (char *)malloc(34 * sizeof(char));
+	x = va_arg(lst, unsigned int);
+	ft_putnbr_base_ui(res, x, "0123456789abcdef");
+	while (res[i])
+	{
+		write(1, &res[i], 1);
+		i++;
+	}
+	return (i);
 }

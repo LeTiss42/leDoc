@@ -1,32 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isdigit.c                                       :+:      :+:    :+:   */
+/*   ft_is_majx.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mravera <@student.42lausanne.ch>           +#+  +:+       +#+        */
+/*   By: mathis <mathis@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/10/27 12:07:59 by mravera           #+#    #+#             */
-/*   Updated: 2021/11/24 17:58:26 by mravera          ###   ########.fr       */
+/*   Created: 2022/03/04 11:36:57 by mathis            #+#    #+#             */
+/*   Updated: 2022/03/04 12:11:29 by mathis           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libftprintf.h"
 
-int	ft_isdigit(int c)
+int	is_majx(va_list lst)
 {
-	if (c >= '0' && c <= '9')
-		return (1);
-	else
-		return (0);
-}
+	unsigned int	x;
+	size_t			i;
+	char			*res;
 
-/*
-#include <stdio.h>
-
-int	main(int argc, char **argv)
-{
-	(void) argc;
-	printf("%i ==> %i", argv[1][0], ft_isdigit(argv[1][0]));
-	return (0);
+	i = 0;
+	res = (char *)malloc(34 * sizeof(char));
+	x = va_arg(lst, unsigned int);
+	ft_putnbr_base_ui(res, x, "0123456789ABCDEF");
+	while (res[i])
+	{
+		write(1, &res[i], 1);
+		i++;
+	}
+	return (i);
 }
-*/

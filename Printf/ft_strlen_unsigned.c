@@ -1,21 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstadd_back.c                                   :+:      :+:    :+:   */
+/*   ft_strlen_unsigned.c                               :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mravera <@student.42lausanne.ch>           +#+  +:+       +#+        */
+/*   By: mathis <mathis@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/12/13 20:49:40 by mravera           #+#    #+#             */
-/*   Updated: 2021/12/13 21:02:36 by mravera          ###   ########.fr       */
+/*   Created: 2022/03/04 12:04:19 by mathis            #+#    #+#             */
+/*   Updated: 2022/03/04 12:04:49 by mathis           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libftprintf.h"
 
-void	ft_lstadd_back(t_list **alst, t_list *new)
+unsigned int	ft_strlen_unsigned(char *str)
 {
-	if (alst && *alst && new)
-		ft_lstlast(*alst)->next = new;
-	if (*alst == NULL)
-		*alst = new;
+	size_t	i;
+
+	i = 0;
+	while (str[i])
+		i++;
+	return (i);
 }
