@@ -1,22 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   libftprintf.h                                      :+:      :+:    :+:   */
+/*   ft_printf.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mathis <mathis@student.42.fr>              +#+  +:+       +#+        */
+/*   By: mravera <mravera@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/01/25 12:01:59 by mathis            #+#    #+#             */
-/*   Updated: 2022/03/04 12:32:32 by mathis           ###   ########.fr       */
+/*   Created: 2022/03/05 13:46:30 by mravera           #+#    #+#             */
+/*   Updated: 2022/03/05 14:26:10 by mravera          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef LIBFTPRINTF_H
-# define LIBFTPRINTF_H
+#ifndef FT_PRINTF_H
+# define FT_PRINTF_H
 
 # include <stdio.h>
 # include <unistd.h>
 # include <stdlib.h>
 # include <stdarg.h>
+
+int				ft_printf(const char *obj, ...);
 
 void			ft_putnbr_base(char *res, int nbr, char *base);
 void			ft_putnbr_base_ui(char *res, unsigned int nbr, char *base);

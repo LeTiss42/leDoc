@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_is_arg.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mathis <mathis@student.42.fr>              +#+  +:+       +#+        */
+/*   By: mravera <mravera@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/04 11:20:18 by mathis            #+#    #+#             */
-/*   Updated: 2022/03/04 12:32:50 by mathis           ###   ########.fr       */
+/*   Updated: 2022/03/05 13:48:30 by mravera          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libftprintf.h"
+#include "ft_printf.h"
 
 int	is_arg(const char *obj, va_list lst)
 {

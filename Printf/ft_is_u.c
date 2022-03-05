@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_is_u.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mathis <mathis@student.42.fr>              +#+  +:+       +#+        */
+/*   By: mravera <mravera@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/04 11:37:19 by mathis            #+#    #+#             */
-/*   Updated: 2022/03/04 12:09:36 by mathis           ###   ########.fr       */
+/*   Updated: 2022/03/05 14:55:48 by mravera          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libftprintf.h"
+#include "ft_printf.h"
 
 int	is_u(va_list lst)
 {
@@ -27,5 +27,6 @@ int	is_u(va_list lst)
 		write(1, &res[i], 1);
 		i++;
 	}
+	free(res);
 	return (i);
 }

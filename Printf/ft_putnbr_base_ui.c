@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libftprintf.h"
+#include "ft_printf.h"
 
 void	ft_putnbr_base_ui(char *res, unsigned int nbr, char *base)
 {
@@ -25,7 +25,7 @@ void	ft_putnbr_base_ui(char *res, unsigned int nbr, char *base)
 		res[0] = base[0];
 	if (nbr == 0)
 		return ;
-	if (nbr > 0)
+	else
 		x = nbr;
 	while (x > 0)
 	{

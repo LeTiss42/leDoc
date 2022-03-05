@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_putnbr_basev.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mathis <mathis@student.42.fr>              +#+  +:+       +#+        */
+/*   By: mravera <mravera@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/04 12:06:19 by mathis            #+#    #+#             */
-/*   Updated: 2022/03/04 12:07:54 by mathis           ###   ########.fr       */
+/*   Updated: 2022/03/05 13:49:31 by mravera          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libftprintf.h"
+#include "ft_printf.h"
 
 void	ft_putnbr_basev(char *res, unsigned long long nbr, char *base)
 {
@@ -25,7 +25,7 @@ void	ft_putnbr_basev(char *res, unsigned long long nbr, char *base)
 		res[0] = base[0];
 	if (nbr == 0)
 		return ;
-	if (nbr > 0)
+	else
 		x = nbr;
 	while (x > 0)
 	{

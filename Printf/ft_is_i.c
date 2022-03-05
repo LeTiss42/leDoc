@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_is_i.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mathis <mathis@student.42.fr>              +#+  +:+       +#+        */
+/*   By: mravera <mravera@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/04 11:36:51 by mathis            #+#    #+#             */
-/*   Updated: 2022/03/04 12:11:34 by mathis           ###   ########.fr       */
+/*   Updated: 2022/03/05 14:55:52 by mravera          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libftprintf.h"
+#include "ft_printf.h"
 
 int	is_i(va_list lst)
 {
@@ -27,5 +27,6 @@ int	is_i(va_list lst)
 		write(1, &res[i], 1);
 		i++;
 	}
+	free(res);
 	return (i);
 }

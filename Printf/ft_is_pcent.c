@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_is_pcent.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mathis <mathis@student.42.fr>              +#+  +:+       +#+        */
+/*   By: mravera <mravera@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/04 11:37:10 by mathis            #+#    #+#             */
-/*   Updated: 2022/03/04 12:32:19 by mathis           ###   ########.fr       */
+/*   Updated: 2022/03/05 13:48:54 by mravera          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libftprintf.h"
+#include "ft_printf.h"
 
 int	is_pcent(void)
 {

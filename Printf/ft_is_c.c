@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_is_c.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mathis <mathis@student.42.fr>              +#+  +:+       +#+        */
+/*   By: mravera <mravera@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/04 11:23:26 by mathis            #+#    #+#             */
-/*   Updated: 2022/03/04 11:37:40 by mathis           ###   ########.fr       */
+/*   Updated: 2022/03/05 13:48:21 by mravera          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libftprintf.h"
+#include "ft_printf.h"
 
 int	is_c(va_list lst)
 {

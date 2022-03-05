@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_is_s.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mathis <mathis@student.42.fr>              +#+  +:+       +#+        */
+/*   By: mravera <mravera@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/04 11:37:15 by mathis            #+#    #+#             */
-/*   Updated: 2022/03/04 11:39:49 by mathis           ###   ########.fr       */
+/*   Updated: 2022/03/05 14:47:45 by mravera          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libftprintf.h"
+#include "ft_printf.h"
 
 int	is_s(va_list lst)
 {
@@ -19,8 +19,8 @@ int	is_s(va_list lst)
 
 	i = 0;
 	x = va_arg(lst, const char *);
-	if (x == NULL)
-		x = "[errNULL]";
+	if (x == 0)
+		x = "(null)";
 	while (x[i])
 	{
 		write(1, &x[i], 1);

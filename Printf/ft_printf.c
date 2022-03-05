@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_printf.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mathis <mathis@student.42.fr>              +#+  +:+       +#+        */
+/*   By: mravera <mravera@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/26 13:05:47 by mathis            #+#    #+#             */
-/*   Updated: 2022/03/04 12:35:26 by mathis           ###   ########.fr       */
+/*   Updated: 2022/03/05 15:30:30 by mravera          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libftprintf.h"
+#include "ft_printf.h"
 
 int	ft_printf(const char *obj, ...)
 {
@@ -37,8 +37,10 @@ int	ft_printf(const char *obj, ...)
 	return (count);
 }
 
+
 #include <stdio.h>
 #include <string.h>
+#include <limits.h>
 
 int	main(int argc, char **argv)
 {
@@ -66,13 +68,15 @@ int	main(int argc, char **argv)
 	printf("\n");
 	printf(" || mien->nbr ==> [%i]", ft_printf("5  mien ==> [%i]", -11));
 	printf("\n\n");
-	printf(" || test->nbr ==> [%i]", printf("6  test ==> [%u]", 0));
+	printf(" || test->nbr ==> [%i]", printf("6  test ==> [%u]", -6));
 	printf("\n");
-	printf(" || mien->nbr ==> [%i]", ft_printf("6  mien ==> [%u]", 0));
+	printf(" || mien->nbr ==> [%i]", ft_printf("6  mien ==> [%u]", -6));
 	printf("\n\n");
 	printf(" || test->nbr ==> [%i]", printf("9  test ==> [%%]"));
 	printf("\n");
 	printf(" || mien->nbr ==> [%i]", ft_printf("9  mien ==> [%%]"));
-	printf("\n");
+	printf("\n\n");
+	printf("lui %d %d %d %d %d %d %d\n", INT_MAX, INT_MIN, 22, 22, 22, 0, -42);
+	ft_printf("moi %d %d %d %d %d %d %d\n", INT_MAX, INT_MIN, 22, 22, 22, 0, -42);
 	return (0);
 }
