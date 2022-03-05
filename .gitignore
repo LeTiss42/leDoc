@@ -56,3 +56,4 @@ dkms.conf
 .FT_SPLIT_TESTER
 .libft-unit-test
 .libft-war-machine
+.printfTester
