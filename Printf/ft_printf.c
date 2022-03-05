@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_printf.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mravera <mravera@student.42.fr>            +#+  +:+       +#+        */
+/*   By: mathis <mathis@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/26 13:05:47 by mathis            #+#    #+#             */
-/*   Updated: 2022/03/05 15:30:30 by mravera          ###   ########.fr       */
+/*   Updated: 2022/03/06 00:16:50 by mathis           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,7 +37,7 @@ int	ft_printf(const char *obj, ...)
 	return (count);
 }
 
-
+/*
 #include <stdio.h>
 #include <string.h>
 #include <limits.h>
@@ -76,7 +76,13 @@ int	main(int argc, char **argv)
 	printf("\n");
 	printf(" || mien->nbr ==> [%i]", ft_printf("9  mien ==> [%%]"));
 	printf("\n\n");
-	printf("lui %d %d %d %d %d %d %d\n", INT_MAX, INT_MIN, 22, 22, 22, 0, -42);
-	ft_printf("moi %d %d %d %d %d %d %d\n", INT_MAX, INT_MIN, 22, 22, 22, 0, -42);
+	printf(" || test->nbr ==> [%i]", printf("lui %d %d %d %d %d %d %d", INT_MAX, INT_MIN, LONG_MAX, LONG_MIN, ULONG_MAX, 0, -42));
+	printf("\n");
+	printf(" || mien->nbr ==> [%i]", ft_printf("moi %d %d %d %d %d %d %d", INT_MAX, INT_MIN, LONG_MAX, LONG_MIN, ULONG_MAX, 0, -42));
+	printf("\n\n");
+	printf(" || test->nbr ==> [%i]", printf("test %p %p ", 0, 0));
+	printf("\n");
+	printf(" || mien->nbr ==> [%i]", ft_printf("mien %p %p ", 0, 0));
 	return (0);
 }
+*/

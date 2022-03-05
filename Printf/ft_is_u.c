@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_is_u.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mravera <mravera@student.42.fr>            +#+  +:+       +#+        */
+/*   By: mathis <mathis@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/04 11:37:19 by mathis            #+#    #+#             */
-/*   Updated: 2022/03/05 14:55:48 by mravera          ###   ########.fr       */
+/*   Updated: 2022/03/05 23:51:03 by mathis           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ int	is_u(va_list lst)
 	size_t			i;
 
 	i = 0;
-	res = (char *)malloc(34 * sizeof(char));
+	res = (char *)calloc(1, 34 * sizeof(char));
 	x = va_arg(lst, const unsigned int);
 	ft_putnbr_base_ui(res, x, "0123456789");
 	while (res[i])

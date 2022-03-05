@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_is_p.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mravera <mravera@student.42.fr>            +#+  +:+       +#+        */
+/*   By: mathis <mathis@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/04 11:37:04 by mathis            #+#    #+#             */
-/*   Updated: 2022/03/05 14:53:38 by mravera          ###   ########.fr       */
+/*   Updated: 2022/03/06 00:13:16 by mathis           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,8 +19,13 @@ int	is_p(va_list lst)
 	char	*res;
 
 	i = 0;
-	res = (char *)malloc(34 * sizeof(char));
+	res = (char *)calloc(1, 34 * sizeof(char));
 	x = va_arg(lst, void *);
+	if (x == 0)
+	{
+		free(res);
+		return (write(1, "(nil)", 5));
+	}
 	ft_putnbr_basev(res, (unsigned long long) x, "0123456789abcdef");
 	write(1, "0", 1);
 	write(1, "x", 1);

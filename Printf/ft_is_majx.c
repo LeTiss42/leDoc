@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_is_majx.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mravera <mravera@student.42.fr>            +#+  +:+       +#+        */
+/*   By: mathis <mathis@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/04 11:36:57 by mathis            #+#    #+#             */
-/*   Updated: 2022/03/05 14:54:34 by mravera          ###   ########.fr       */
+/*   Updated: 2022/03/05 23:50:39 by mathis           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ int	is_majx(va_list lst)
 	char			*res;
 
 	i = 0;
-	res = (char *)malloc(34 * sizeof(char));
+	res = (char *)calloc(1, 34 * sizeof(char));
 	x = va_arg(lst, unsigned int);
 	ft_putnbr_base_ui(res, x, "0123456789ABCDEF");
 	while (res[i])
