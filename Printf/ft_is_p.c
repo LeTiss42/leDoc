@@ -6,7 +6,7 @@
 /*   By: mathis <mathis@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/04 11:37:04 by mathis            #+#    #+#             */
-/*   Updated: 2022/03/06 00:13:16 by mathis           ###   ########.fr       */
+/*   Updated: 2022/03/07 18:08:18 by mathis           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ int	is_p(va_list lst)
 	char	*res;
 
 	i = 0;
-	res = (char *)calloc(1, 34 * sizeof(char));
+	res = (char *)ft_calloc(1, 34 * sizeof(char));
 	x = va_arg(lst, void *);
 	if (x == 0)
 	{

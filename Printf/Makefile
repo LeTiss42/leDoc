@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: mravera <mravera@student.42.fr>            +#+  +:+       +#+         #
+#    By: mathis <mathis@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/11/18 19:28:02 by mathis            #+#    #+#              #
-#    Updated: 2022/03/05 14:25:54 by mravera          ###   ########.fr        #
+#    Updated: 2022/03/07 18:25:28 by mathis           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -29,6 +29,7 @@ SRC = ft_is_arg.c \
 	  ft_putnbr_basev.c \
 	  ft_strlen_unsigned.c \
 	  ft_printf.c \
+	  ft_calloc.c \
 
 
 OBJ = $(SRC:.c=.o)

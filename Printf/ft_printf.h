@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_printf.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mravera <mravera@student.42.fr>            +#+  +:+       +#+        */
+/*   By: mathis <mathis@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/05 13:46:30 by mravera           #+#    #+#             */
-/*   Updated: 2022/03/05 14:26:10 by mravera          ###   ########.fr       */
+/*   Updated: 2022/03/07 18:23:58 by mathis           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,7 @@
 
 int				ft_printf(const char *obj, ...);
 
+void			*ft_calloc(size_t count, size_t size);
 void			ft_putnbr_base(char *res, int nbr, char *base);
 void			ft_putnbr_base_ui(char *res, unsigned int nbr, char *base);
 void			ft_putnbr_basev(char *res, unsigned long long nbr, char *base);
