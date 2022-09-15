@@ -50,3 +50,10 @@ modules.order
 Module.symvers
 Mkfile.old
 dkms.conf
+
+# fichiers perso
+.libftTester
+.FT_SPLIT_TESTER
+.libft-unit-test
+.libft-war-machine
+.printfTester
